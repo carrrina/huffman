@@ -17,7 +17,6 @@ TreeNode initHuffman(double frequency,
 					 unsigned char value,
 					 TreeNode left,
 					 TreeNode right) {
-	//TODO 1
 	TreeNode t = NULL;
 	t = malloc(sizeof(struct treeNode));
 	t->value = value;
@@ -29,7 +28,6 @@ TreeNode initHuffman(double frequency,
 }
 
 TreeNode createHuffmanTree(char *text) {
-	//TODO 2
 	int freq[127] = { 0 }, i, nr = 0;
 	for (i = 0; i < strlen(text); i++)
 		freq[(int)text[i]]++;
@@ -90,7 +88,6 @@ void traverse(TreeNode huffman, char *s, int caracter) {
 char coded[200];
 
 char *compress(TreeNode huffman, char *text) {
-	//TODO 3
 	int i;
 	char s[200];
 	s[0] = '\0';
@@ -108,7 +105,6 @@ char *compress(TreeNode huffman, char *text) {
 char decoded[200];
 
 char *decompress(TreeNode huffman, char *text) {
-	//TODO 4
 	decoded[0] = '\0';
 	char c[200], aux[2];
 	int i, j;
@@ -144,7 +140,6 @@ char *decompress(TreeNode huffman, char *text) {
 }
 
 TreeNode freeTree(TreeNode root) {
-	//TODO 5
 	if (root == NULL)
 		return NULL;
 	if (root->left != NULL)
